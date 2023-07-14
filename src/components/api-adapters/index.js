@@ -23,3 +23,14 @@ export const register = async (username, password, email) => {
         console.log(error);
     }
 }
+
+export async function getAllBooks() {
+    try {
+        const response await fetch(`${BASE_URL}/books`);
+        console.log(response);
+        const translatedData = await response.json();
+        return translatedData;
+    } catch(error) {
+        console.log(error);
+    }
+}
